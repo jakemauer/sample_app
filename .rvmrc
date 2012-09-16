@@ -1,0 +1,2 @@
+export USE_BUNDLER=try
+rvm use --create ruby-1.9.3@rp
