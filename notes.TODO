@@ -1,0 +1,9 @@
+General Notes:
+ ☐ You must start SublimeText2 from the commandline for built in rspec tests to work
+   ☐ Meaning the app actually needs to start as a result of the subl (or in my case sub) command. Quit ST if rspec isn't working.
+ ☐ ctrl + shift + . is the ERB wrapper shortcut
+
+
+Ruby Tidbits:
+ ☐ 1.year.ago
+ ☐ 5.years.from_now
