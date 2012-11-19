@@ -7,3 +7,11 @@ General Notes:
 Ruby Tidbits:
  ☐ 1.year.ago
  ☐ 5.years.from_now
+ ☐ user.update_attributes
+ ☐ user.new just makes it in memory, user.create saves to DB
+
+ RegEx:
+  ☐ email validation:
+    /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i
+    ☐ Coerce this test "user@example.org" =~  /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i
+    to true by doing !!( "user@example.org" =~  /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i)
