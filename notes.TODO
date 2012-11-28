@@ -15,3 +15,4 @@ Ruby Tidbits:
     /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i
     ☐ Coerce this test "user@example.org" =~  /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i
     to true by doing !!( "user@example.org" =~  /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i)
+  ☐ Use rubular.com for ruby regex testing
