@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
-  match "/signup", to: "users#new"
+  resources :users
+
+  match "/signup", to: "users#new", as: :signup
 
   root :to => 'static_pages#home'
   match '/help',     to: 'static_pages#help'

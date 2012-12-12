@@ -7,7 +7,7 @@ General Notes:
 Ruby Tidbits:
  ☐ 1.year.ago
  ☐ 5.years.from_now
- ☐ user.update_attributes
+ ☐ user.update_attributes saves to db
  ☐ user.new just makes it in memory, user.create saves to DB
 
  RegEx:
@@ -21,4 +21,8 @@ Rails notes:
  ☐ raise params.inspect in the user controller
  ☐ Rails.env.development?
  ☐     @user = User.find(params[:id]) with a page url of /users/1
-         :id is a symbol which grabs '1' because it's an available parameter due to the 1 in the url. This then returns the user object with id of 1, and stores it in @user, which can be used by the view. 
+         :id is a symbol which grabs '1' because it's an available parameter due to the 1 in the url. This then returns the user object with id of 1, and stores it in @user, which can be used by the view.
+ ☐ You can wrap things in a silence_warnings do block:
+     if you're redefining a constant or something where you know it's going to complain
+ ☐ Paperclip for uploads?
+ ☐ pull out validation errors with user.errors.full_messages
