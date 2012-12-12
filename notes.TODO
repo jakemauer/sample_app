@@ -16,3 +16,9 @@ Ruby Tidbits:
     ☐ Coerce this test "user@example.org" =~  /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i
     to true by doing !!( "user@example.org" =~  /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i)
   ☐ Use rubular.com for ruby regex testing
+
+Rails notes:
+ ☐ raise params.inspect in the user controller
+ ☐ Rails.env.development?
+ ☐     @user = User.find(params[:id]) with a page url of /users/1
+         :id is a symbol which grabs '1' because it's an available parameter due to the 1 in the url. This then returns the user object with id of 1, and stores it in @user, which can be used by the view. 
