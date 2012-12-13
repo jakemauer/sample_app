@@ -26,3 +26,5 @@ Rails notes:
      if you're redefining a constant or something where you know it's going to complain
  ☐ Paperclip for uploads?
  ☐ pull out validation errors with user.errors.full_messages
+ ☐ Remove "password digest" error message
+     - config/locales/en.yml
