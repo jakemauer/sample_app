@@ -28,3 +28,10 @@ Rails notes:
  ☐ pull out validation errors with user.errors.full_messages
  ☐ Remove "password digest" error message
      - config/locales/en.yml
+
+Rake:
+ ☐ rake db:test:prepare
+
+Rspec notes:
+ ☐ You can add "save_and_open_page" before a test to show an HTML render of that page as capybara sees it: 
+       it { save_and_open_page; should have_selector('h1', text: 'Sign in') }
