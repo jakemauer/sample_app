@@ -19,7 +19,7 @@ Ruby Tidbits:
 
 Rails notes:
  ☐ raise params.inspect in the user controller
- ☐ Rails.env.development?
+ ☐ Find out what environment rails is running in: Rails.env.development?
  ☐     @user = User.find(params[:id]) with a page url of /users/1
          :id is a symbol which grabs '1' because it's an available parameter due to the 1 in the url. This then returns the user object with id of 1, and stores it in @user, which can be used by the view.
  ☐ You can wrap things in a silence_warnings do block:
@@ -28,6 +28,9 @@ Rails notes:
  ☐ pull out validation errors with user.errors.full_messages
  ☐ Remove "password digest" error message
      - config/locales/en.yml
+ Rails DB notes:
+  ☐ To save data while skipping validations:
+      user.save(validate: false) 
 
 Rake:
  ☐ rake db:test:prepare
@@ -35,3 +38,7 @@ Rake:
 Rspec notes:
  ☐ You can add "save_and_open_page" before a test to show an HTML render of that page as capybara sees it: 
        it { save_and_open_page; should have_selector('h1', text: 'Sign in') }
+
+ Heroku notes:
+  ☐ Did you remember to run migrations on heroku?
+        heroku run rake db:migrate  
