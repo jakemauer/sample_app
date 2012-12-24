@@ -35,6 +35,9 @@ SampleApp::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  #default url required by devise
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
   # Speed up tests BCrypt's cost function.
   require 'bcrypt'
   silence_warnings do

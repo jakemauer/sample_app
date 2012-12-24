@@ -1,6 +1,8 @@
 SampleApp::Application.routes.draw do
+  devise_for :users
+
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  # resources :sessions, only: [:new, :create, :destroy]
 
   match "/signup",   to: "users#new", as: :signup
   match '/signin',   to: "sessions#new", as: :signin

@@ -48,3 +48,5 @@ Rspec notes:
  Heroku notes:
   ☐ Did you remember to run migrations on heroku?
         heroku run rake db:migrate  
+  ☐ Reset your DB
+      heroku pg:reset DATABASE --confirm your-app-name
