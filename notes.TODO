@@ -32,6 +32,12 @@ Rails notes:
   ☐ To save data while skipping validations:
       user.save(validate: false) 
 
+Rake
+
+Faker:
+ ☐ If it's taking too long to create data, you can lower the BCRYPT cost function in development.rb just like you did in test.rb
+
+
 Rake:
  ☐ rake db:test:prepare
 
