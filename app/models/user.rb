@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
@@ -13,8 +13,17 @@ class User < ActiveRecord::Base
 
   # before_save { |user| user.email = user.email.downcase }
   # before_save :create_remember_token
+  
+  def self.find_for_open_id(access_token, signed_in_resource=nil)
+    data = access_token.info
+    if user = User.where(:email => data["email"]).first
+      user
+    else
+      User.create!(:email => data["email"], :password => Devise.friendly_token[0,20])
+    end
+  end
 
-  validates :name, presence: true, length: { maximum: 50 }
+  # validates :name, presence: true, length: { maximum: 50 }
   # VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   # validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
   #                   uniqueness: { case_sensitive: false}

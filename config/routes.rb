@@ -1,13 +1,14 @@
 SampleApp::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :users
   # resources :sessions, only: [:new, :create, :destroy]
 
-  match "/signup",   to: "users#new", as: :signup
-  match '/signin',   to: "sessions#new", as: :signin
-  match '/signout',  to: "sessions#destroy", as: :signout, via: :delete
 
+  # match "/signup",   to: "users#new", as: :signup
+  # match '/signin',   to: "sessions#new", as: :signin
+  # match '/signout',  to: "sessions#destroy", as: :signout, via: :delete
+#
   root               to: 'static_pages#home'
   match '/help',     to: 'static_pages#help'
   match '/about',    to: 'static_pages#about'
